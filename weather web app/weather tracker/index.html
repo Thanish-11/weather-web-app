@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>
+            <i class="fa-solid fa-cloud-sun"></i>
+            Weather App
+        </h1>
+
+        <p class="subtitle">
+            Search any city in the world
+        </p>
+
+        <div class="searchBox">
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter City Name">
+
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+        <div class="loading" id="loading">
+
+            <div class="loader"></div>
+            <p>Fetching Weather...</p>
+
+        </div>
+
+        <div class="weather" id="weather">
+
+            <img id="icon">
+
+            <h2 id="temp"></h2>
+
+            <h3 id="condition"></h3>
+
+            <h4 id="cityName"></h4>
+
+            <div class="details">
+
+                <div class="box">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <h5>Humidity</h5>
+
+                    <p id="humidity"></p>
+
+                </div>
+
+                <div class="box">
+
+                    <i class="fa-solid fa-wind"></i>
+
+                    <h5>Wind</h5>
+
+                    <p id="wind"></p>
+
+                </div>
+
+                <div class="box">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                    <h5>Country</h5>
+
+                    <p id="country"></p>
+
+                </div>
+
+                <div class="box">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <h5>Local Time</h5>
+
+                    <p id="time"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="error" id="error">
+
+            City Not Found
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

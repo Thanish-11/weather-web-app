@@ -1,0 +1,358 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(-45deg,
+    #6dd5fa,
+    #2980b9,
+    #4facfe,
+    #00f2fe);
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 12s ease infinite;
+
+}
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+
+}
+
+.card{
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.18);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+h1{
+
+    font-size:35px;
+    margin-bottom:5px;
+
+}
+
+.subtitle{
+
+    opacity:.85;
+
+    margin-bottom:30px;
+
+}
+
+.searchBox{
+
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+
+}
+
+.searchBox input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:40px;
+
+    padding:16px;
+
+    font-size:17px;
+
+    background:rgba(255,255,255,.25);
+
+    color:white;
+
+}
+
+.searchBox input::placeholder{
+
+    color:white;
+
+}
+
+.searchBox button{
+
+    width:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#2193b0;
+
+    font-size:20px;
+
+    transition:.4s;
+
+}
+
+.searchBox button:hover{
+
+    transform:rotate(360deg);
+
+    background:#ffe082;
+
+}
+
+.loading{
+
+    display:none;
+
+    margin-top:30px;
+
+}
+
+.loader{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:6px solid white;
+
+    border-top:6px solid transparent;
+
+    margin:auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.weather{
+
+    display:none;
+
+    margin-top:30px;
+
+    animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.weather img{
+
+    width:120px;
+
+}
+
+#temp{
+
+    font-size:60px;
+
+    margin-top:10px;
+
+}
+
+#condition{
+
+    font-weight:500;
+
+    margin-bottom:5px;
+
+}
+
+#cityName{
+
+    margin-bottom:30px;
+
+    opacity:.9;
+
+}
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.box{
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.3s;
+
+}
+
+.box:hover{
+
+    transform:scale(1.06);
+
+    background:rgba(255,255,255,.28);
+
+}
+
+.box i{
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}
+
+.box h5{
+
+    margin-bottom:5px;
+
+    font-weight:500;
+
+}
+
+.box p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.error{
+
+    display:none;
+
+    margin-top:25px;
+
+    background:#ff4d4d;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+}
+
+@media(max-width:500px){
+
+.card{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+.details{
+
+grid-template-columns:1fr;
+
+}
+
+.searchBox{
+
+flex-direction:column;
+
+}
+
+.searchBox button{
+
+width:100%;
+height:55px;
+border-radius:15px;
+
+}
+
+}
